@@ -8,8 +8,8 @@ const Hero = () => {
     return (
         <section className='hero-container grid-col-2'>
             <div className='box-text'>
-                <h1 className='mb-9'>Hi,<br /> I'm Thành.</h1>
-                <Typical className="opacity-95 typical-text mb-20" loop={Infinity} wrapper="p"
+                <h1 className='mb-9 heading-text'>Hi,<br /> I'm Thành.</h1>
+                <Typical className="p-text mb-20" loop={Infinity} wrapper="p"
                     steps={['HCMUS-AUT Student', 2000, 'Web Developer', 2000, 'Software Engineer', 2000]} />
                 <a href="#" className='btn btn-header'>
                     <span>See My Projects</span>

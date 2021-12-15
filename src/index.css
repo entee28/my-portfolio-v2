@@ -23,6 +23,7 @@
 :root {
   --color-primary: #6948fa;
   --color-secondary: #00adff;
+  --lg-container: 1160px;
 }
 
 * {
@@ -119,17 +120,6 @@ p {
   margin-left: 120px;
 }
 
-.hero-container h1 {
-  line-height: 1.32;
-  font-size: 61px;
-  font-weight: bold;
-}
-
-.typical-text {
-  color: #757384;
-  font-size: 22px;
-}
-
 .btn-header img {
   position: relative;
   width: 20px;
@@ -204,6 +194,24 @@ p {
   background-color: rgb(0 173 255 / 65%);
 }
 
+/* Text Styles */
+.heading-text {
+  line-height: 1.32;
+  font-size: 61px;
+  font-weight: bold;
+}
+
+.heading-md {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.p-text {
+  color: #757384;
+  font-size: 22px;
+  opacity: 0.95;
+}
+
 /* Divider */
 .divider {
   display: flex;
@@ -223,4 +231,48 @@ p {
 
 .divider img:hover {
   filter: invert(27%) sepia(46%) saturate(5555%) hue-rotate(244deg) brightness(99%) contrast(97%);
+}
+
+/* About */
+.about-container {
+  max-width: var(--lg-container);
+  margin: 30px auto;
+  position: relative;
+}
+
+.figure {
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  background-color: #e1dbff;
+  height: 75%;
+  width: 400px;
+  z-index: -2;
+}
+
+.figure-2 {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  background-color: var(--color-secondary);
+  height: 400px;
+  width: 300px;
+  z-index: -1;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.box-text {
+  max-width: 440px;
+}
+
+.grid-col-2-about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: space-between;
 }
