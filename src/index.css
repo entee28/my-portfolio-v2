@@ -203,3 +203,24 @@ p {
 .btn-nav:hover {
   background-color: rgb(0 173 255 / 65%);
 }
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+}
+
+.divider::before {
+  content: '';
+  width: 83%;
+  height: 1px;
+  background-color: #e3e2ef;
+}
+
+.divider li {
+  margin: 0 15px;
+}
+
+.divider img:hover {
+  filter: invert(27%) sepia(46%) saturate(5555%) hue-rotate(244deg) brightness(99%) contrast(97%);
+}
