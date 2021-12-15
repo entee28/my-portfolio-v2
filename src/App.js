@@ -1,16 +1,13 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Hero from './components/Hero';
 import NavBar from './components/NavBar';
-import Divider from './components/Divider';
+import Home from './components/Home';
 
 function App() {
   return (
     <BrowserRouter>
     <NavBar/>
-    <Hero/>
-    <Divider/>
       <Switch>
-
+        <Route component={Home} path='/' exact/>
       </Switch>
     </BrowserRouter>
   );
