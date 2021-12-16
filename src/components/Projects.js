@@ -26,7 +26,7 @@ const Projects = () => {
     return (
         <main>
             <section className='about-container'>
-                <h1 className='heading-lg my-32'><span className='decoration-lg'></span> My Latest Works</h1>
+                <h1 className='heading-lg mt-20 mb-14'><span className='decoration-lg'></span> My Latest Works</h1>
                 <section className='grid-col-2 gap-8'>
                     {projectData && projectData.map((project, index) => (
                         <article className='relative rounded-lg shadow-xl bg-white p-16'>
@@ -34,11 +34,11 @@ const Projects = () => {
                                 <a href={project.link} target="_blank" rel="noopener noreferrer">{project.title}</a>
                             </h3>
                             <div className='text-gray-500 text-xs '>
-                                <span>
+                                {/* <span>
                                     <strong className='font-bold'>Finished on</strong>:{" "}
                                     {new Date(project.date).toLocaleDateString()}
-                                </span>
-                                <br/>
+                                </span> */}
+                                {/* <br/> */}
                                 <span>
                                     <strong className='font-bold'>Type</strong>:{" "}
                                     {project.projectType}
@@ -49,6 +49,8 @@ const Projects = () => {
                                     ))}
                                 </div>
                                 <p className='p-text'>{project.description}</p>
+                                <img src={project.mainImage.asset.url} alt={project.mainImage.alt}
+                                        className='rounded-r object-cover' />
                             </div>
                         </article>
                     ))}
