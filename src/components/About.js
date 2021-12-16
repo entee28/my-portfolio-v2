@@ -1,17 +1,14 @@
 import React from 'react'
-// import myself from '../img/myself.jpg'
 
 const About = () => {
     return (
         <section>
             <div className='figure'></div>
             <div className='about-container'>
-                <div className='figure-2'>
-                    {/* <img src={myself} alt="me" /> */}
-                </div>
+                <div className='figure-2'></div>
                 <div className='flex-container'>
                     <div className='box-text pl-10'>
-                        <h2 className='heading-md'>About Me</h2>
+                        <h2 className='heading-md'><span className='decoration-md'></span> About Me</h2>
                         <p className='p-text pt-5'>Currently a sophomore at HCMUS,
                             Thành is fueled by his passion for building and delivering incredible websites / softwares to end users.</p>
                     </div>
