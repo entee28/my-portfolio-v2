@@ -254,7 +254,7 @@ p {
   position: absolute;
   top: 0;
   left: 30%;
-  background-color: var(--color-secondary);
+  background-color: #F9FFDB;
   height: 400px;
   width: 300px;
   z-index: -1;
@@ -275,6 +275,13 @@ p {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: space-between;
+}
+
+.decoration {
+  width: 20px;
+  height: 22px;
+  margin-right: 10px;
+  border: 2px solid #e1bdff;
 }
   /* Experience */
 .experience {

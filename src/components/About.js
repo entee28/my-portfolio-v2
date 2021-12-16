@@ -1,11 +1,14 @@
 import React from 'react'
+// import myself from '../img/myself.jpg'
 
 const About = () => {
     return (
         <section>
             <div className='figure'></div>
             <div className='about-container'>
-                <div className='figure-2'></div>
+                <div className='figure-2'>
+                    {/* <img src={myself} alt="me" /> */}
+                </div>
                 <div className='flex-container'>
                     <div className='box-text pl-10'>
                         <h2 className='heading-md'>About Me</h2>
@@ -23,8 +26,8 @@ const About = () => {
             <div className='about-container'>
                 <div className="experience" id="experience">
                     <div className="container">
-                        <header className="section-header text-center">
-                            <p className='p-text'>My Resume</p>
+                        <header className="section-header">
+                            <p className='p-text'><span className='decoration'></span> My Resume</p>
                             <h2 className='heading-md'>Education, Working Experience</h2>
                         </header>
                         <div className="timeline mt-20">
