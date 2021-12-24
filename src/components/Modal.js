@@ -1,4 +1,5 @@
 import { useRef, useEffect, useCallback } from 'react'
+import { useForm } from 'react-hook-form';
 import { useSpring, animated } from 'react-spring'
 
 
@@ -30,54 +31,87 @@ const Modal = ({ showModal, setShowModal }) => {
         return () => document.removeEventListener('keydown', keyPress)
     }, [keyPress]);
 
+    // const resetForm = () => {
+    //     setName('');
+    //     setMail('');
+    //     setSubject('');
+    //     setMessage('');
+    // }
+
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = (data) => {
+        alert(JSON.stringify(data));
+    };
+
     return (
         <>
             {showModal ? (
                 <section className='modal-background' ref={modalRef} onClick={closeModal}>
                     <animated.div style={animation}>
                         <div className='modal-container'>
-                            <div className='close-modal'>
+                            <div className='close-modal z-10'>
                                 <button onClick={() => setShowModal(prev => !prev)}>
                                     <span className='text-4xl font-bold'>&times;</span>
                                 </button>
                             </div>
                             <div className='form-container'>
                                 <h1 className='heading-md mb-20'>Hi, let us talk!</h1>
-                                <form data-netlify="true" className='form-flex' value="sentMessage">
+                                <form data-netlify="true" className='form-flex' value="sentMessage" onSubmit={handleSubmit(onSubmit)}>
                                     <input type="hidden" name="form-name" value="contact" />
 
                                     <div className="input-row">
                                         <label htmlFor="name" className='input'>
-                                            <input type="text" className="input__field" placeholder=' ' name='name' id='name' />
+                                            <input type="text" className="input__field" placeholder=' ' name='name' id='name'
+                                                {...register("name", {
+                                                    required: true,
+                                                    pattern: /^[A-Za-z]+$/i
+                                                })} />
                                             <span className="input__label">Name</span>
                                         </label>
+                                        {errors?.name?.type === "required" && <p className='error'>This field is required</p>}
+                                        {errors?.name?.type === "pattern" && (
+                                            <p className='error'>Alphabetical characters only</p>
+                                        )}
                                     </div>
 
                                     <div className="input-row">
                                         <label htmlFor="mail" className='input'>
-                                            <input type='email' className="input__field" placeholder=' ' name='mail' id='mail' />
+                                            <input className="input__field" placeholder=' ' name='mail' id='mail'
+                                                {...register("mail", {
+                                                    required: true,
+                                                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                                                })} />
                                             <span className="input__label">Email</span>
                                         </label>
+                                        {errors?.mail?.type === "required" && <p className='error'>This field is required</p>}
+                                        {errors?.mail?.type === "pattern" && (
+                                            <p className='error'>Invalid email</p>
+                                        )}
                                     </div>
-                                    
+
                                     <div className="input-row">
                                         <label htmlFor="subject" className='input'>
-                                            <input type='text' className="input__field" placeholder=' ' name='subject' id='subject' />
+                                            <input type='text' className="input__field" placeholder=' ' name='subject' id='subject'
+                                                {...register("subject")} />
                                             <span className="input__label">Subject</span>
                                         </label>
                                     </div>
-                                    
-                                    
+
+
                                     <div className="input-row">
                                         <label htmlFor="message" className='input'>
-                                            <textarea className="input__field" placeholder=' ' name='subject' id='subject' />
+                                            <textarea className="input__field" placeholder=' ' name='subject' id='subject'
+                                                {...register("message", {
+                                                    required: true
+                                                })} />
                                             <span className="input__label">Message</span>
                                         </label>
+                                        {errors?.message?.type === "required" && <p className='error'>This field is required</p>}
                                     </div>
 
                                     <div className="btn-group">
                                         <button className="btn btn-submit mt-14" type='submit'>Send</button>
-                                        <button className='btn' type='reset'>Reset</button>
+                                        {/* <button className='btn' type='reset' onClick={resetForm}>Reset</button> */}
                                     </div>
 
                                 </form>
