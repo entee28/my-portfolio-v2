@@ -23,7 +23,12 @@
 :root {
   --color-primary: #6948fa;
   --color-secondary: #00adff;
+
+
   --lg-container: 1160px;
+
+  --size-bezel: .5rem;
+  --size-radius: 4px;
 }
 
 * {
@@ -145,6 +150,18 @@ p {
   font-weight: bold;
   text-transform: initial;
   text-align: center;
+
+  &[type=reset] {
+    // background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 200;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
 }
 
 .btn-nav {
@@ -164,7 +181,21 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.btn-submit {
+  background-color: var(--color-primary);
+  width: 6rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
   transition: all 0.3s ease-in-out;
+  z-index: 100;
+
+  &:hover {
+    background-color: #ff95d7;
+    color: #fff;
+  }
 }
 
 .btn-header::before {
@@ -192,6 +223,10 @@ p {
 
 .btn-nav:hover {
   background-color: rgb(0 173 255 / 65%);
+}
+
+.btn-group {
+  z-index: 10;
 }
 
 /* Text Styles */
@@ -516,12 +551,26 @@ p {
   height: 900px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, .2);
   opacity: 1;
-  background: #fff;
+  background: white;
   display: flex;
   flex-direction: column;
   position: relative;
   border-radius: 20px;
   margin: 0 auto;
+
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    background-image: url('./img/Oreti.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .close-modal {
@@ -532,4 +581,50 @@ p {
 
 .form-container {
   margin: 10px 60px;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
+  margin: 1.5rem 0px;
+}
+
+.input {
+  position: relative;
+  
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+    margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: white;
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  &__field {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 3px solid currentColor;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    color: currentColor;
+    background: transparent;
+    border-radius: var(--size-radius);
+    
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .input__label {
+        transform: translate(.25rem, -65%) scale(.8);
+        color: var(--color-primary);
+      }
+    }
+  }
 }
