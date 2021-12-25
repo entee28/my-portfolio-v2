@@ -31,13 +31,6 @@ const Modal = ({ showModal, setShowModal }) => {
         return () => document.removeEventListener('keydown', keyPress)
     }, [keyPress]);
 
-    // const resetForm = () => {
-    //     setName('');
-    //     setMail('');
-    //     setSubject('');
-    //     setMessage('');
-    // }
-
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         alert(JSON.stringify(data));
@@ -64,7 +57,7 @@ const Modal = ({ showModal, setShowModal }) => {
                                             <input type="text" className="input__field" placeholder=' ' name='name' id='name'
                                                 {...register("name", {
                                                     required: true,
-                                                    pattern: /^[A-Za-z]+$/i
+                                                    pattern: /\p{L}+/u
                                                 })} />
                                             <span className="input__label">Name</span>
                                         </label>

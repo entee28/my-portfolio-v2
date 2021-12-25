@@ -1,31 +1,32 @@
 import React from 'react'
+import me from '../img/me.jpg'
+import download from '../img/arrow-down-solid.svg'
 
 const About = () => {
     return (
         <section>
-            <div className='figure'></div>
             <div className='about-container'>
-                <div className='figure-2'></div>
-                <div className='flex-container'>
-                    <div className='box-text pl-10'>
-                        <h2 className='heading-md'><span className='decoration-md'></span> About Me</h2>
-                        <p className='p-text pt-5'>Currently a sophomore at HCMUS,
-                            Thành is fueled by his passion for building and delivering incredible websites / softwares to end users.</p>
-                    </div>
-                </div>
-                <div className='grid-col-2-about py-64'>
-                    <h1 className='heading-text'>Driven by technology</h1>
-                    <p className='p-text pl-32'>He considers himself a ‘forever student,’ eager to both build on his technical skills
+                <div className='grid-col-2-about my-32'>
+                    <img src={me} alt="me" />
+                    <div className='pl-32 about-detail'>
+                        <p className='p-text about-header font-bold mb-10'><span className='decoration'></span> About Me</p>
+                        <p className='p-text'>Currently a sophomore at HCMUS,
+                            Thành is fueled by his passion for building and delivering incredible websites / softwares to end users.
+                            He considers himself a ‘forever student,’ eager to both build on his technical skills
                         and stay in tune with the latest technology through continued research and professional development.
-                    </p>
+                        </p>
+                        <div className="btn-group">
+                            <button className="btn btn-about mt-20">Download My CV</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='about-container'>
                 <div className="experience" id="experience">
                     <div className="container">
                         <header className="section-header">
-                            <p className='p-text'><span className='decoration'></span> My Resume</p>
-                            <h2 className='heading-md'>Education, Working Experience</h2>
+                            <p className='p-text about-header'><span className='decoration'></span> Timeline</p>
+                            <h2 className='heading-md'>Résumé / Experience</h2>
                         </header>
                         <div className="timeline mt-20">
                             <div className="timeline-item left">
