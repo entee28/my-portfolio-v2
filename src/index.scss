@@ -1,5 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.4.x/dist/typography.min.css");
-@import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 
 @font-face {
@@ -292,6 +290,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
 }
 
 .btn-about:hover {
@@ -307,6 +306,7 @@ p {
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   z-index: 100;
+  margin-top: 3.5rem;
 
   &:hover {
     background-color: #ff95d7;
@@ -380,6 +380,8 @@ p {
     color: #000;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
   }
 }
 
@@ -391,6 +393,11 @@ p {
 .divider {
   display: flex;
   align-items: center;
+
+  img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
 
 .divider::before {
@@ -409,7 +416,7 @@ p {
 }
 
 /* About */
-.about-container {
+.about-container, .project-container {
   max-width: var(--lg-container);
   margin: 30px auto;
   position: relative;
@@ -443,6 +450,14 @@ p {
 
 .box-text {
   max-width: 440px;
+
+  h1 {
+    margin-bottom: 2.25rem;
+  }
+
+  .p-text {
+    margin-bottom: 5rem;
+  }
 }
 
 .grid-col-2-about {
@@ -450,6 +465,7 @@ p {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: space-between;
+  margin: 8rem 0;
 }
 
 .decoration {
@@ -469,6 +485,7 @@ p {
 
 .about-detail {
   align-self: flex-start;
+  padding-left: 8rem;
 }
   /* Experience */
 .experience {
@@ -479,6 +496,7 @@ p {
 .experience .timeline {
     position: relative;
     width: 100%;
+    margin-top: 5rem;
 }
 
 .experience .timeline::after {
@@ -608,6 +626,40 @@ p {
   border-radius: 15px;
   padding: 5px 15px;
   color: white;
+  margin-right: 0.5rem;
+}
+
+.project-container {
+  .heading-lg {
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .grid-col-2 {
+    gap: 2rem;
+  }
+
+  article {
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    background-color: white;
+    padding: 4rem;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.project-description {
+  color: #221e41;
+  font-size: 0.75rem;
+}
+
+.project-img {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 /* Modal */
@@ -653,10 +705,21 @@ p {
   height: fit-content;
   align-self: flex-end;
   margin: 30px;
+  z-index: 10;
+}
+
+.close-modal-btn {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: bold;
 }
 
 .form-container {
   margin: 10px 60px;
+
+  h1 {
+    margin-bottom: 5rem;
+  }
 }
 
 .form-flex {
@@ -760,6 +823,22 @@ p {
     justify-items: center;
   }
 
+  .grid-col-2-about {
+    margin: 0;
+
+    .image {
+      margin-bottom: 2rem;
+    }
+
+    .btn-about {
+      margin-top: 3rem;
+    }
+  }
+
+  .about-detail {
+    padding-left: 0;
+  }
+
   #hero-illustrate {
     display: none;
   }
@@ -768,7 +847,7 @@ p {
     width: 60%;
   }
 
-  .hero-container, .about-container {
+  .hero-container, .about-container, .project-container {
     max-width: 85%;
   }
 }
@@ -799,6 +878,32 @@ p {
 
   .hamburger {
     display: block;
+  }
+
+  .form-container {  
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .btn-submit {
+    margin-top: 1rem;
+  }
+
+  .project-container {
+    .heading-lg {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+    }
+
+    article {
+      padding: 0;
+    }
+
+    .heading-project {
+      font-size: 1.5rem;
+    }
   }
 }
 

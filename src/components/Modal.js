@@ -42,13 +42,13 @@ const Modal = ({ showModal, setShowModal }) => {
                 <section className='modal-background' ref={modalRef} onClick={closeModal}>
                     <animated.div style={animation}>
                         <div className='modal-container'>
-                            <div className='close-modal z-10'>
+                            <div className='close-modal'>
                                 <button onClick={() => setShowModal(prev => !prev)}>
-                                    <span className='text-4xl font-bold'>&times;</span>
+                                    <span className='close-modal-btn'>&times;</span>
                                 </button>
                             </div>
                             <div className='form-container'>
-                                <h1 className='heading-md md:mb-20'>Hi, let us talk!</h1>
+                                <h1 className='heading-md'>Hi, let us talk!</h1>
                                 <form data-netlify="true" className='form-flex' value="sentMessage" onSubmit={handleSubmit(onSubmit)}>
                                     <input type="hidden" name="form-name" value="contact" />
 
@@ -103,7 +103,7 @@ const Modal = ({ showModal, setShowModal }) => {
                                     </div>
 
                                     <div className="btn-group">
-                                        <button className="btn btn-submit mt-4 md:mt-14" type='submit'>Send</button>
+                                        <button className="btn btn-submit" type='submit'>Send</button>
                                         {/* <button className='btn' type='reset' onClick={resetForm}>Reset</button> */}
                                     </div>
 

@@ -5,17 +5,17 @@ const About = () => {
     return (
         <section>
             <div className='about-container'>
-                <div className='grid-col-2-about lg:my-32'>
-                    <img src={me} alt="me" className='image sm:mb-10 lg:mb-0' />
-                    <div className='lg:pl-32 about-detail'>
-                        <p className='p-text about-header font-bold mb-10'><span className='decoration'></span> About Me</p>
+                <div className='grid-col-2-about'>
+                    <img src={me} alt="me" className='image' />
+                    <div className='about-detail'>
+                        <p className='p-text about-header'><span className='decoration'></span> About Me</p>
                         <p className='p-text'>Currently a sophomore at HCMUS,
                             Thành is fueled by his passion for building and delivering incredible websites / softwares to end users.
                             He considers himself a ‘forever student,’ eager to both build on his technical skills
                         and stay in tune with the latest technology through continued research and professional development.
                         </p>
                         <div className="btn-group">
-                            <button className="btn btn-about mt-20">Download My CV</button>
+                            <button className="btn btn-about">Download My CV</button>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ const About = () => {
                             <p className='p-text about-header'><span className='decoration'></span> Timeline</p>
                             <h2 className='heading-md'>Résumé / Experience</h2>
                         </header>
-                        <div className="timeline mt-20">
+                        <div className="timeline">
                             <div className="timeline-item left">
                                 <div className="timeline-text">
                                     <div className="timeline-date p-text">2020 - 2024</div>

@@ -25,32 +25,32 @@ const Projects = () => {
 
     return (
         <main>
-            <section className='about-container'>
-                <h1 className='heading-lg mt-20 mb-14'><span className='decoration-lg'></span> My Latest Works</h1>
-                <section className='grid-col-2 gap-8'>
+            <section className='project-container'>
+                <h1 className='heading-lg'><span className='decoration-lg'></span> My Latest Works</h1>
+                <section className='grid-col-2'>
                     {projectData && projectData.map((project, index) => (
-                        <article className='relative rounded-lg shadow-xl bg-white p-16'>
+                        <article>
                             <h3 className='heading-project'>
                                 <a href={project.link} target="_blank" rel="noopener noreferrer">{project.title}</a>
                             </h3>
-                            <div className='text-gray-500 text-xs '>
+                            <div className='project-description'>
                                 {/* <span>
-                                    <strong className='font-bold'>Finished on</strong>:{" "}
+                                    <strong>Finished on</strong>:{" "}
                                     {new Date(project.date).toLocaleDateString()}
                                 </span> */}
                                 {/* <br/> */}
                                 <span>
-                                    <strong className='font-bold'>Type</strong>:{" "}
+                                    <strong>Type</strong>:{" "}
                                     {project.projectType}
                                 </span>
                                 <div className='tags'>
                                     {project.tags.map((tag, index) => (
-                                        <span className='mr-2 pill'>{tag}</span>
+                                        <span className='pill'>{tag}</span>
                                     ))}
                                 </div>
                                 <p className='p-text'>{project.description}</p>
                                 <img src={project.mainImage.asset.url} alt={project.mainImage.alt}
-                                        className='rounded-r object-cover' />
+                                        className='project-img' />
                             </div>
                         </article>
                     ))}
