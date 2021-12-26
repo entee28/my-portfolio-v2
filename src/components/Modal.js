@@ -48,7 +48,7 @@ const Modal = ({ showModal, setShowModal }) => {
                                 </button>
                             </div>
                             <div className='form-container'>
-                                <h1 className='heading-md mb-20'>Hi, let us talk!</h1>
+                                <h1 className='heading-md md:mb-20'>Hi, let us talk!</h1>
                                 <form data-netlify="true" className='form-flex' value="sentMessage" onSubmit={handleSubmit(onSubmit)}>
                                     <input type="hidden" name="form-name" value="contact" />
 
@@ -103,7 +103,7 @@ const Modal = ({ showModal, setShowModal }) => {
                                     </div>
 
                                     <div className="btn-group">
-                                        <button className="btn btn-submit mt-14" type='submit'>Send</button>
+                                        <button className="btn btn-submit mt-4 md:mt-14" type='submit'>Send</button>
                                         {/* <button className='btn' type='reset' onClick={resetForm}>Reset</button> */}
                                     </div>
 

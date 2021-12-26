@@ -5,9 +5,9 @@ const About = () => {
     return (
         <section>
             <div className='about-container'>
-                <div className='grid-col-2-about my-32'>
-                    <img src={me} alt="me" className='image' />
-                    <div className='pl-32 about-detail'>
+                <div className='grid-col-2-about lg:my-32'>
+                    <img src={me} alt="me" className='image sm:mb-10 lg:mb-0' />
+                    <div className='lg:pl-32 about-detail'>
                         <p className='p-text about-header font-bold mb-10'><span className='decoration'></span> About Me</p>
                         <p className='p-text'>Currently a sophomore at HCMUS,
                             Thành is fueled by his passion for building and delivering incredible websites / softwares to end users.
