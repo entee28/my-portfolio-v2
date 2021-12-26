@@ -1,3 +1,5 @@
+// @import url("https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.4.x/dist/typography.min.css");
+// @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 
 @font-face {
@@ -332,9 +334,10 @@ p {
 }
 
 .btn-header:hover::before {
-  top: 0;
-  left: 0;
+  top: -0.5px;
+  left: -1px;
   transition: all 0.3s ease-in-out;
+  border: solid 1px #ff95d7;
 }
 
 .btn-nav:hover {
@@ -380,13 +383,15 @@ p {
     color: #000;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     font-weight: bold;
   }
 }
 
 .selected-nav {
   color: var(--color-primary);
+  height: 1px;
+  width: auto;
 }
 
 /* Divider */
@@ -708,10 +713,20 @@ p {
   z-index: 10;
 }
 
-.close-modal-btn {
+.close-modal-cross {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: bold;
+}
+
+.close-modal-btn {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .form-container {
@@ -734,6 +749,10 @@ p {
 .input {
   position: relative;
 
+  textarea {
+    height: 5rem;
+  }
+
   &__label {
     position: absolute;
     left: 0;
@@ -751,12 +770,15 @@ p {
   &__field {
     box-sizing: border-box;
     display: block;
+    height: 3.5rem;
     width: 100%;
     border: 3px solid #757384;
     padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
     color: currentColor;
     background: transparent;
     border-radius: var(--size-radius);
+    font-family: Eina;
+    font-size: 1rem;
     
     &:focus,
     &:not(:placeholder-shown) {
@@ -828,6 +850,7 @@ p {
 
     .image {
       margin-bottom: 2rem;
+      width: 60%;
     }
 
     .btn-about {
@@ -841,10 +864,6 @@ p {
 
   #hero-illustrate {
     display: none;
-  }
-
-  .image {
-    width: 60%;
   }
 
   .hero-container, .about-container, .project-container {
@@ -903,6 +922,10 @@ p {
 
     .heading-project {
       font-size: 1.5rem;
+    }
+
+    .image {
+      width: 90%;
     }
   }
 }

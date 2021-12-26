@@ -10,7 +10,7 @@ function App() {
     <NavBar/>
       <Switch>
         <Route component={Home} path='/' exact/>
-        <Route component={About} path='/about'/>
+        <Route component={About} activeClassName="selected-nav" path='/about'/>
         <Route component={Projects} path='/projects'/>
       </Switch>
     </BrowserRouter>

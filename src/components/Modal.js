@@ -1,6 +1,6 @@
 import { useRef, useEffect, useCallback } from 'react'
 import { useForm } from 'react-hook-form';
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring';
 
 
 const Modal = ({ showModal, setShowModal }) => {
@@ -43,8 +43,8 @@ const Modal = ({ showModal, setShowModal }) => {
                     <animated.div style={animation}>
                         <div className='modal-container'>
                             <div className='close-modal'>
-                                <button onClick={() => setShowModal(prev => !prev)}>
-                                    <span className='close-modal-btn'>&times;</span>
+                                <button className='close-modal-btn' onClick={() => setShowModal(prev => !prev)}>
+                                    <span className='close-modal-cross'>&times;</span>
                                 </button>
                             </div>
                             <div className='form-container'>

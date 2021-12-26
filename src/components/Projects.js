@@ -49,8 +49,10 @@ const Projects = () => {
                                     ))}
                                 </div>
                                 <p className='p-text'>{project.description}</p>
-                                <img src={project.mainImage.asset.url} alt={project.mainImage.alt}
-                                        className='project-img' />
+                                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={project.mainImage.asset.url} alt={project.mainImage.alt}
+                                        className='project-img image' />
+                                </a>
                             </div>
                         </article>
                     ))}
