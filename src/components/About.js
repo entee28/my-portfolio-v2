@@ -1,13 +1,12 @@
 import React from 'react'
 import me from '../img/me.jpg'
-import download from '../img/arrow-down-solid.svg'
 
 const About = () => {
     return (
         <section>
             <div className='about-container'>
                 <div className='grid-col-2-about my-32'>
-                    <img src={me} alt="me" />
+                    <img src={me} alt="me" className='image' />
                     <div className='pl-32 about-detail'>
                         <p className='p-text about-header font-bold mb-10'><span className='decoration'></span> About Me</p>
                         <p className='p-text'>Currently a sophomore at HCMUS,

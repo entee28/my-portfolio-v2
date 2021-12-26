@@ -17,7 +17,7 @@ const Hero = () => {
                     <img src={chevron} alt="chevron" />
                 </NavLink>
             </div>
-            <img src={image} alt="hero" />
+            <img src={image} alt="hero" className='image' id='hero-illustrate' />
         </section>
     )
 }
