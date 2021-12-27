@@ -42,6 +42,7 @@ html, body {
   font-family: Eina, sans-serif;
   line-height: 1.4;
   color: black;
+  overflow-x: hidden;
 }
 
 a {
@@ -427,26 +428,6 @@ p {
   position: relative;
 }
 
-.figure {
-  position: absolute;
-  bottom: 0;
-  left: 23%;
-  background-color: #e1dbff;
-  height: 75%;
-  width: 400px;
-  z-index: -2;
-}
-
-.figure-2 {
-  position: absolute;
-  top: 0;
-  left: 30%;
-  background-color: #F9FFDB;
-  height: 400px;
-  width: 300px;
-  z-index: -1;
-}
-
 .flex-container {
   display: flex;
   align-items: center;
@@ -495,7 +476,7 @@ p {
   /* Experience */
 .experience {
     position: relative;
-    padding: 45px 0 15px 0;
+    padding: 50px 0 15px 0;
 }
 
 .experience .timeline {

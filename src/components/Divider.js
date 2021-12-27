@@ -6,7 +6,7 @@ import { useSpring, animated } from 'react-spring'
 const Divider = () => {
     const animation = useSpring({
         config: {
-            duration: 200
+            duration: 500
         },
         from: {
             opacity: 0,
@@ -14,7 +14,7 @@ const Divider = () => {
         to: {
             opacity: 1,
         },
-        delay: 800
+        delay: 1000
     })
 
     return (

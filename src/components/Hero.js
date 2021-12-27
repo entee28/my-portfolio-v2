@@ -8,7 +8,7 @@ import { useSpring, animated } from 'react-spring'
 const Hero = () => {
     const animation = useSpring({
         config: {
-            duration: 400
+            duration: 700
         },
         from: {
             opacity: 0,
@@ -23,7 +23,7 @@ const Hero = () => {
 
     const animation2 = useSpring({
         config: {
-            duration: 400
+            duration: 700
         },
         from: {
             opacity: 0,
