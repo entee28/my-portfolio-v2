@@ -31,7 +31,7 @@ const Modal = ({ showModal, setShowModal }) => {
         return () => document.removeEventListener('keydown', keyPress)
     }, [keyPress]);
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         alert(JSON.stringify(data));
     };

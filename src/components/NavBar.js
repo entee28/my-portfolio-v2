@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import Modal from './Modal';
 import { useSpring, animated } from 'react-spring';
@@ -32,6 +32,29 @@ const NavBar = () => {
         },
     })
 
+    function useOutsideAlerter(ref) {
+        useEffect(() => {
+            /**
+             * Alert if clicked on outside of element
+             */
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    setShowMobileNav(false);
+                }
+            }
+    
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                // Unbind the event listener on clean up
+                document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef);
+
     return (
         <>
             <main>
@@ -62,7 +85,7 @@ const NavBar = () => {
                                 <button type='button' className='btn btn-nav' onClick={openModal}>Let's Talk</button>
                             </div>
 
-                            <div onClick={toggleNav} className={'hamburger ' + (showMobileNav ? 'open' : null)} type='button'>
+                            <div onClick={toggleNav} className={'hamburger ' + (showMobileNav ? 'open' : null)} type='button' ref={wrapperRef}>
                                 <span className="hamburger-top"></span>
                                 <span className="hamburger-middle"></span>
                                 <span className="hamburger-bottom"></span>

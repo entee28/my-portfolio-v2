@@ -909,18 +909,29 @@ p {
       width: 90%;
     }
   }
+
+  .input-row {
+    margin: 0.2rem 0px;
+  }
 }
 
 @media (max-height: 568px) {
   .modal-container {
-    height: 520px;
+    height: 550px;
 
     .form-container {
       margin: 0px 50px;
     }
 
     .input-row {
-      margin: 0.4rem 0px;
+      margin: 0.1rem 0px;
+    }
+
+    .input {
+      &__field {
+        height: 3rem;
+        font-size: 0.5rem;
+      }
     }
   }
 
