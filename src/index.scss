@@ -1,6 +1,6 @@
 // @import url("https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.4.x/dist/typography.min.css");
 // @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Meow+Script&display=swap");
 
 @font-face {
   font-family: Eina;
@@ -19,16 +19,14 @@
   }
 }
 
-
 :root {
   --color-primary: #6948fa;
   --color-secondary: #00adff;
   --color-semi: #e1bdff;
 
-
   --lg-container: 1160px;
 
-  --size-bezel: .5rem;
+  --size-bezel: 0.5rem;
   --size-radius: 4px;
 }
 
@@ -38,7 +36,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-family: Eina, sans-serif;
   line-height: 1.4;
   color: black;
@@ -113,7 +112,7 @@ p {
 
 .navbar ul li a:hover {
   color: #000;
-  opacity: 1.0;
+  opacity: 1;
 }
 
 // Hamburger
@@ -129,7 +128,9 @@ p {
   display: none;
 }
 
-.hamburger-middle, .hamburger-top, .hamburger-bottom {
+.hamburger-middle,
+.hamburger-top,
+.hamburger-bottom {
   position: absolute;
   top: 0;
   left: 0;
@@ -160,7 +161,7 @@ p {
   }
 }
 
-// Mobile Nav 
+// Mobile Nav
 .hidden {
   transform: translateX(100%);
 }
@@ -250,7 +251,7 @@ p {
   text-transform: initial;
   text-align: center;
 
-  &[type=reset] {
+  &[type="reset"] {
     // background-color: #fff;
     color: #000;
     font-size: 1rem;
@@ -318,7 +319,7 @@ p {
 }
 
 .btn-header::before {
-  content: '';
+  content: "";
   position: absolute;
   border: solid 1px #a587ff;
   width: 100%;
@@ -367,7 +368,7 @@ p {
 }
 
 .heading-project {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -407,7 +408,7 @@ p {
 }
 
 .divider::before {
-  content: '';
+  content: "";
   width: 83%;
   height: 1px;
   background-color: #e3e2ef;
@@ -422,7 +423,8 @@ p {
 }
 
 /* About */
-.about-container, .project-container {
+.about-container,
+.project-container {
   max-width: var(--lg-container);
   margin: 30px auto;
   position: relative;
@@ -473,65 +475,65 @@ p {
   align-self: flex-start;
   padding-left: 8rem;
 }
-  /* Experience */
+/* Experience */
 .experience {
-    position: relative;
-    padding: 50px 0 15px 0;
+  position: relative;
+  padding: 50px 0 15px 0;
 }
 
 .experience .timeline {
-    position: relative;
-    width: 100%;
-    margin-top: 5rem;
+  position: relative;
+  width: 100%;
+  margin-top: 5rem;
 }
 
 .experience .timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: var(--color-primary);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: var(--color-primary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
 }
 
 .experience .timeline .timeline-item {
-    position: relative;
-    background: inherit;
-    width: 50%;
-    margin-bottom: 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: 30px;
 }
 
 .experience .timeline .timeline-item.left {
-    left: 0;
-    padding-right: 30px;
+  left: 0;
+  padding-right: 30px;
 }
 
 .experience .timeline .timeline-item.right {
-    left: 50%;
-    padding-left: 30px;
+  left: 50%;
+  padding-left: 30px;
 }
 
 .experience .timeline .timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 48px;
-    right: -8px;
-    background: #ffffff;
-    border: 2px solid var(--color-primary);
-    border-radius: 16px;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 48px;
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  z-index: 1;
 }
 
 .experience .timeline .timeline-item.right::after {
-    left: -8px;
+  left: -8px;
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
@@ -548,56 +550,56 @@ p {
 }
 
 .experience .timeline .timeline-date {
-    position: absolute;
-    width: 100%;
-    top: 44px;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
 }
 
 .experience .timeline .timeline-item.left .timeline-date {
-    text-align: left;
-    left: calc(100% + 55px);
+  text-align: left;
+  left: calc(100% + 55px);
 }
 
 .experience .timeline .timeline-item.right .timeline-date {
-    text-align: right;
-    right: calc(100% + 55px);
+  text-align: right;
+  right: calc(100% + 55px);
 }
 
 .experience .timeline .timeline-text {
-    padding: 30px;
-    background: #ffffff;
-    position: relative;
-    border-right: 5px solid #dddddd;
-    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
-    border-right: none;
-    border-left: 5px solid #dddddd;
+  border-right: none;
+  border-left: 5px solid #dddddd;
 }
 
 .experience .timeline .timeline-text h2 {
-    margin: 0 0 5px 0;
-    font-size: 22px;
-    font-weight: 600;
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .experience .timeline .timeline-text h4 {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .experience .timeline .timeline-text p {
-    margin: 0;
-    font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
 /* Project */
 .tags {
@@ -622,7 +624,7 @@ p {
   }
 
   .grid-col-2 {
-    gap: 2rem;
+    gap: 1rem;
   }
 
   article {
@@ -630,7 +632,7 @@ p {
     border-radius: 0.5rem;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     background-color: white;
-    padding: 4rem;
+    padding: 2rem;
   }
 
   strong {
@@ -646,13 +648,14 @@ p {
 .project-img {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
+  height: 400px;
 }
 
 /* Modal */
 .modal-background {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
   position: fixed;
   display: flex;
   justify-content: center;
@@ -663,7 +666,7 @@ p {
 .modal-container {
   width: 700px;
   height: 900px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   opacity: 1;
   background: white;
   display: flex;
@@ -673,7 +676,7 @@ p {
   margin: 0 auto;
 
   &::before {
-    content: ' ';
+    content: " ";
     display: block;
     position: absolute;
     left: 0;
@@ -681,7 +684,7 @@ p {
     width: 100%;
     height: 100%;
     opacity: 0.08;
-    background-image: url('./img/Oreti.png');
+    background-image: url("./img/Oreti.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -702,12 +705,12 @@ p {
 
 .close-modal-btn {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .form-container {
@@ -738,8 +741,8 @@ p {
     position: absolute;
     left: 0;
     top: 0;
-    padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
-    margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+    padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * 0.5);
+    margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * 0.5);
     white-space: nowrap;
     transform: translate(0, 0);
     transform-origin: 0 0;
@@ -760,11 +763,11 @@ p {
     border-radius: var(--size-radius);
     font-family: Eina;
     font-size: 1rem;
-    
+
     &:focus,
     &:not(:placeholder-shown) {
       & + .input__label {
-        transform: translate(.25rem, -65%) scale(.8);
+        transform: translate(0.25rem, -65%) scale(0.8);
         color: var(--color-primary);
       }
     }
@@ -777,51 +780,52 @@ p {
 
 @media (max-width: 768px) {
   .experience .timeline::after {
-      left: 8px;
+    left: 8px;
   }
 
   .experience .timeline .timeline-item {
-      width: 100%;
-      padding-left: 38px;
-  }
-  
-  .experience .timeline .timeline-item.left {
-      padding-right: 0;
-  }
-  
-  .experience .timeline .timeline-item.right {
-      left: 0%;
-      padding-left: 38px;
+    width: 100%;
+    padding-left: 38px;
   }
 
-  .experience .timeline .timeline-item.left::after, 
-  .experience .timeline .timeline-item.right::after {
-      left: 0;
+  .experience .timeline .timeline-item.left {
+    padding-right: 0;
   }
-  
+
+  .experience .timeline .timeline-item.right {
+    left: 0%;
+    padding-left: 38px;
+  }
+
+  .experience .timeline .timeline-item.left::after,
+  .experience .timeline .timeline-item.right::after {
+    left: 0;
+  }
+
   .experience .timeline .timeline-item.left::before,
   .experience .timeline .timeline-item.right::before {
-      left: 18px;
-      border-color: transparent #dddddd transparent transparent;
-  }
-  
-  .experience .timeline .timeline-item.left .timeline-date,
-  .experience .timeline .timeline-item.right .timeline-date {
-      position: relative;
-      top: 0;
-      right: auto;
-      left: 0;
-      text-align: left;
-      margin-bottom: 10px;
-  }
-  
-  .experience .timeline .timeline-item.left .timeline-text,
-  .experience .timeline .timeline-item.right .timeline-text {
-      border-right: none;
-      border-left: 5px solid #dddddd;
+    left: 18px;
+    border-color: transparent #dddddd transparent transparent;
   }
 
-  .grid-col-2, .grid-col-2-about {
+  .experience .timeline .timeline-item.left .timeline-date,
+  .experience .timeline .timeline-item.right .timeline-date {
+    position: relative;
+    top: 0;
+    right: auto;
+    left: 0;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .experience .timeline .timeline-item.left .timeline-text,
+  .experience .timeline .timeline-item.right .timeline-text {
+    border-right: none;
+    border-left: 5px solid #dddddd;
+  }
+
+  .grid-col-2,
+  .grid-col-2-about {
     grid-template-columns: 1fr;
     justify-items: center;
   }
@@ -847,8 +851,15 @@ p {
     display: none;
   }
 
-  .hero-container, .about-container, .project-container {
+  .hero-container,
+  .about-container,
+  .project-container {
     max-width: 85%;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -856,13 +867,14 @@ p {
   .image {
     width: 80%;
   }
-  
+
   .hero-container {
     margin: 70px auto;
   }
 
   .navbar {
-    .navbar-nav-left, .navbar-nav-right {
+    .navbar-nav-left,
+    .navbar-nav-right {
       display: none;
     }
   }
@@ -880,7 +892,7 @@ p {
     display: block;
   }
 
-  .form-container {  
+  .form-container {
     h1 {
       margin-bottom: 1rem;
     }
@@ -898,7 +910,7 @@ p {
     }
 
     article {
-      padding: 0;
+      padding: 1.25rem;
     }
 
     .heading-project {
