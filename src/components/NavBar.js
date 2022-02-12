@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import Modal from './Modal';
-import { useSpring, animated } from 'react-spring';
 
 const NavBar = () => {
     const [showModal, setShowModal] = useState(false);
@@ -20,18 +19,6 @@ const NavBar = () => {
         }
     }
 
-    const animation = useSpring({
-        config: {
-            duration: 500
-        },
-        from: {
-            opacity: 0,
-        },
-        to: {
-            opacity: 1,
-        },
-    })
-
     function useOutsideAlerter(ref) {
         useEffect(() => {
             /**
@@ -42,7 +29,7 @@ const NavBar = () => {
                     setShowMobileNav(false);
                 }
             }
-    
+
             // Bind the event listener
             document.addEventListener("mousedown", handleClickOutside);
             return () => {
@@ -59,7 +46,7 @@ const NavBar = () => {
         <>
             <main>
                 <Modal showModal={showModal} setShowModal={setShowModal} />
-                <animated.div style={animation}>
+                <div>
                     <nav className="navbar">
                         <div className="navbar-container">
                             <div className="navbar-brand">
@@ -92,7 +79,7 @@ const NavBar = () => {
                             </div>
                         </div>
                     </nav>
-                </animated.div>
+                </div>
             </main>
 
             <div className={'mobile-menu ' + (showMobileNav ? null : 'hidden')}>
